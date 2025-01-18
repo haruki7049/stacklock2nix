@@ -44,12 +44,8 @@
   #
   # `additionalHaskellPkgSetOverrides` is unused if `baseHaskellPkgSet` is null.
   additionalHaskellPkgSetOverrides ? hfinal: hprev: {}
-, # Additional nativeBuildInputs to provide in the devShell.
-  #
-  # additionalDevShellNativeBuildInputs :: [ Drv ]
-  #
-  # `additionalDevShellNativeBuildInputs` is unused if `baseHaskellPkgSet` is null.
-  additionalDevShellNativeBuildInputs ? (stacklockHaskellPkgSet: [])
+, # shellFor arguments
+  shellForArguments ? null
 , # When creating your own Haskell package set from the stacklock2nix
   # output, you may need to specify a newer all-cabal-hashes.
   #
